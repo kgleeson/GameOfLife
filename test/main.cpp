@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  test
+//  GameOfLife
 //
 //  Created by Kieran Gleeson on 20/03/2013.
 //  Copyright (c) 2013 Kieran Gleeson. All rights reserved.
@@ -8,25 +8,29 @@
 
 #include <iostream>
 #include <curses.h>
+#include "Square.h"
 #define WIDTH 80
 #define HEIGHT 25
 
+
 using namespace std;
 
-void setupGrid(char grid[HEIGHT][WIDTH])
+void setupGrid(Square * grid[])
 {
-    for(int i=0; i < HEIGHT ; i++){
-        for(int j=0; j< WIDTH ; j++){
-            grid[i][j] = ' ';
+    for(int i = 0; i < HEIGHT ; i++){
+        for(int j = 0; j < WIDTH ; j++){
+            Square * obj = new Square();
+            obj->setPos(i, j);
+            grid[j + (i * WIDTH)] = obj;
         }
     }
 }
 
-void printGrid(char grid[HEIGHT][WIDTH])
+void printGrid(Square * grid[])
 {
     for(int i = 0; i < HEIGHT ; i++){
         for(int j = 0; j < WIDTH ; j++){
-            cout << grid[i][j];
+            cout << grid[i + (j * WIDTH)];
         }
         cout << '\n';
     }
@@ -34,10 +38,10 @@ void printGrid(char grid[HEIGHT][WIDTH])
 
 int main(int argc, const char * argv[])
 {
-    char grid[HEIGHT][WIDTH];
-    setupGrid(grid);
-    grid[5][5] = 'X';
-    printGrid(grid);
+    Square * grid = new Square[WIDTH*HEIGHT];
+    setupGrid(&grid);
+//    grid[5][5] = 'X';
+    printGrid(&grid);
     return 0;
 }
 

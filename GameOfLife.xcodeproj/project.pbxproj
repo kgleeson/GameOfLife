@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B4FA84A16FA594200F73602 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FA84916FA594200F73602 /* main.cpp */; };
 		6B4FA84C16FA594200F73602 /* test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B4FA84B16FA594200F73602 /* test.1 */; };
+		6BBEF1F316FDE00A00D70631 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEF1F116FDE00A00D70631 /* Square.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		6B4FA84616FA594200F73602 /* GameOfLife */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameOfLife; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4FA84916FA594200F73602 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6B4FA84B16FA594200F73602 /* test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = test.1; sourceTree = "<group>"; };
+		6BBEF1F116FDE00A00D70631 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
+		6BBEF1F216FDE00A00D70631 /* Square.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Square.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				6B4FA84916FA594200F73602 /* main.cpp */,
 				6B4FA84B16FA594200F73602 /* test.1 */,
+				6BBEF1F116FDE00A00D70631 /* Square.cpp */,
+				6BBEF1F216FDE00A00D70631 /* Square.h */,
 			);
 			name = GameOfLife;
 			path = test;
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4FA84A16FA594200F73602 /* main.cpp in Sources */,
+				6BBEF1F316FDE00A00D70631 /* Square.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
