@@ -17,12 +17,12 @@ using namespace std;
 
 void setupGrid(Square * grid[])
 {
-    for(int xPos = 0; xPos < HEIGHT ; xPos++){
-        for(int yPos = 0; yPos < WIDTH ; yPos++){
-            cout << "x: " << xPos << " y: " << yPos << " pos: " << yPos + (xPos * WIDTH) << endl;
+    for(int yPos = 0; yPos < HEIGHT ; yPos++){
+        for(int xPos = 0; xPos < WIDTH ; xPos++){
+            cout << "y: " << yPos << " x: " << xPos << " pos: " << xPos + (yPos * WIDTH) << endl;
             Square * obj = new Square();
-            obj->setPos(xPos, yPos);
-            grid[yPos + (xPos * WIDTH)] = obj;
+            obj->setPos(yPos, xPos);
+            grid[xPos + (yPos * WIDTH)] = obj;
         }
     }
 }
