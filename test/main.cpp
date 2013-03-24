@@ -17,31 +17,20 @@ using namespace std;
 
 void setupGrid(Square * grid[])
 {
-    for(int i = 0; i < HEIGHT ; i++){
-        for(int j = 0; j < WIDTH ; j++){
+    for(int xPos = 0; xPos < HEIGHT ; xPos++){
+        for(int yPos = 0; yPos < WIDTH ; yPos++){
+            cout << "x: " << xPos << " y: " << yPos << " pos: " << yPos + (xPos * WIDTH) << endl;
             Square * obj = new Square();
-            obj->setPos(i, j);
-            grid[j + (i * WIDTH)] = obj;
+            obj->setPos(xPos, yPos);
+            grid[yPos + (xPos * WIDTH)] = obj;
         }
-    }
-}
-
-void printGrid(Square * grid[])
-{
-    for(int i = 0; i < HEIGHT ; i++){
-        for(int j = 0; j < WIDTH ; j++){
-            cout << grid[i + (j * WIDTH)];
-        }
-        cout << '\n';
     }
 }
 
 int main(int argc, const char * argv[])
 {
-    Square * grid = new Square[WIDTH*HEIGHT];
+    Square * grid = new Square[WIDTH * HEIGHT];
     setupGrid(&grid);
-//    grid[5][5] = 'X';
-    printGrid(&grid);
     return 0;
 }
 
