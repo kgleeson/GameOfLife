@@ -8,11 +8,11 @@
 
 #include "Square.h"
 
-//Square::Square(int a, int b){
-//    width = a;
-//    height = b;
-//    
-//}
+Square::Square(int a, int b){
+    width = a;
+    height = b;
+    
+}
 
 void Square::setPos(int a, int b){
     x = a;
