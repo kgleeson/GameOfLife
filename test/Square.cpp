@@ -28,6 +28,10 @@ void Square::setShouldFlip(){
     shouldFlip = true;
 }
 
+bool getCurrentState(){
+    return currentState;
+}
+
 int Square::findNeighbours(Square arrayName[]){
     int totalNeighbours = 0;
     int neighbour;

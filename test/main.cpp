@@ -26,10 +26,30 @@ void setupGrid(Square* grid[])
     }
 }
 
+void printGrid(Square* grid[])
+{
+    for(int yPos = 0; yPos < HEIGHT ; yPos++){
+        for(int xPos = 0; xPos < WIDTH ; xPos++){
+            cout << grid[xPos + (yPos * WIDTH)]->currentState;
+        }
+        cout << endl;
+    }
+}
+
+void testData(Square* grid[])
+{
+    int testCells[3] = {13, 93, 173};
+    for (int i = 0 ; i < 3; i++) {
+        Square test = *grid[testCells[i]];
+        test.setCurrentState();
+    }
+}
+
 int main(int argc, const char * argv[])
 {
     Square** grid = new Square*[WIDTH * HEIGHT];
     setupGrid(grid);
+    testData(grid);
     return 0;
 }
 
