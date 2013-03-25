@@ -19,7 +19,7 @@ void setupGrid(Square* grid[])
 {
     for(int yPos = 0; yPos < HEIGHT ; yPos++){
         for(int xPos = 0; xPos < WIDTH ; xPos++){
-            cout << "y: " << yPos << " x: " << xPos << " pos: " << xPos + (yPos * WIDTH) << endl;
+//            cout << "y: " << yPos << " x: " << xPos << " pos: " << xPos + (yPos * WIDTH) << endl;
             Square* obj = new Square(xPos, yPos);
             grid[xPos + (yPos * WIDTH)] = obj;
         }
@@ -30,9 +30,8 @@ void printGrid(Square* grid[])
 {
     for(int yPos = 0; yPos < HEIGHT ; yPos++){
         for(int xPos = 0; xPos < WIDTH ; xPos++){
-            Square testSquare = *grid[xPos + (yPos * WIDTH)];
-            bool state = testSquare.currentState;
-            cout << state;
+            Square* testSquare = grid[xPos + (yPos * WIDTH)];
+            bool state = testSquare->currentState;
             if(state == 1){
             cout << 'X' ;
             }else{
@@ -47,9 +46,8 @@ void testData(Square* grid[])
 {
     int testCells[3] = {13, 93, 173};
     for (int i = 0 ; i < 3; i++) {
-        Square test = *grid[testCells[i]];
-        test.setCurrentStateTrue();
-        cout << "Current: " << test.currentState << endl;
+        Square* test = grid[testCells[i]];
+        test->setCurrentStateTrue();
     }
 }
 
