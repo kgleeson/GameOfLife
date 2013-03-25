@@ -16,12 +16,12 @@
 class Square{
     int x, y;
     int height, width;
-    bool currentState = false;
     bool shouldFlip = false;
 public:
+    bool currentState = false;
     Square(int, int);
     void setPos(int, int);
-    void setCurrentState();
+    void setCurrentStateTrue();
     void setShouldFlip();
     int findNeighbours(Square arrayName[]);
     bool getCurrentState();

@@ -19,7 +19,7 @@ void Square::setPos(int a, int b){
     y = b;
 }
 
-void Square::setCurrentState(){
+void Square::setCurrentStateTrue(){
     currentState = true;
     
 }
@@ -28,9 +28,6 @@ void Square::setShouldFlip(){
     shouldFlip = true;
 }
 
-bool getCurrentState(){
-    return currentState;
-}
 
 int Square::findNeighbours(Square arrayName[]){
     int totalNeighbours = 0;
