@@ -20,7 +20,8 @@ void setupGrid(Square* grid[])
     for(int yPos = 0; yPos < HEIGHT ; yPos++){
         for(int xPos = 0; xPos < WIDTH ; xPos++){
 //            cout << "y: " << yPos << " x: " << xPos << " pos: " << xPos + (yPos * WIDTH) << endl;
-            Square* obj = new Square(xPos, yPos);
+            int iNum = xPos + (yPos * WIDTH);
+            Square* obj = new Square(xPos, yPos, iNum);
             grid[xPos + (yPos * WIDTH)] = obj;
         }
     }

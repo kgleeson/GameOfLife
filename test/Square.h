@@ -15,15 +15,16 @@
 
 class Square{
     int x, y;
+    int iNum;
     int height, width;
     bool shouldFlip = false;
 public:
     bool currentState = false;
-    Square(int, int);
+    Square(int, int, int);
     void setPos(int, int);
     void setCurrentStateTrue();
     void setShouldFlip();
-    int findNeighbours(Square arrayName[]);
+    int findNeighbours(Square* arrayName[]);
     bool getCurrentState();
 };
 
