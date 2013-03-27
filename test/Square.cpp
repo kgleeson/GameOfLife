@@ -5,7 +5,7 @@
 //  Created by Kieran Gleeson on 23/03/2013.
 //  Copyright (c) 2013 Kieran Gleeson. All rights reserved.
 //
-
+#include <vector>
 #include "Square.h"
 
 Square::Square(int a, int b, int c){
@@ -33,12 +33,34 @@ void Square::setShouldFlip(){
 int Square::findNeighbours(Square* arrayName[]){
     int totalNeighbours = 0;
     int neighbour;
+    std::vector <int> arr;
 /*
  Neighbours
  -81 -80 -79
  -1   X    1
   79  80  81
 */
+    if(x > 0){
+        arr.push_back(-1);
+        if(y > 0){
+            arr.push_back(-81);
+            arr.push_back(-80);
+        }
+        if(y < height){
+            arr.push_back(79);
+            arr.push_back(80);
+        }
+    }
+    if(x < width - 1){
+        arr.push_back(1);
+        if(y > 0){
+            arr.push_back(-79);
+        }
+        if(y < height){
+            arr.push_back(81);
+        }
+    }
+    
     for(int i = -1; i < 2; i++){
         if(x >= 0){
             for(int j = -1; i < 2; j++){
