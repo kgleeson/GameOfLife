@@ -22,4 +22,5 @@ public:
     void setupGrid();
     void printGrid();
     void testData();
+    Square getSquareXY(int, int);
 };

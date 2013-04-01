@@ -12,7 +12,7 @@
 Grid::Grid(int a, int b){
     width = a;
     height = b;
-    Square** grid = new Square* [width * height];
+    grid = new Square* [width * height];
 }
 
 void Grid::setupGrid()
@@ -44,10 +44,15 @@ void Grid::printGrid()
 
 void Grid::testData()
 {
-    int testCells[3] = {13, 93, 173};
+//    int testCells[3] = {13, 93, 173};
     for (int i = 0 ; i < 3; i++) {
-        Square* test = grid[testCells[i]];
-        test->setCurrentStateTrue();
+//        Square* test = grid[testCells[i]];
+        Square test = Grid::getSquareXY(i,i);
+        test.setCurrentStateTrue();
     }
 }
 
+Square Grid::getSquareXY(int x, int y)
+{
+    return *grid[x + (y * width)];
+}
