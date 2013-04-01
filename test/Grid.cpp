@@ -27,7 +27,7 @@ void Grid::setupGrid()
     }
 }
 
-void Grid::printGrid(Square* grid[])
+void Grid::printGrid()
 {
     for(int yPos = 0; yPos < height ; yPos++){
         for(int xPos = 0; xPos < width ; xPos++){
@@ -41,3 +41,13 @@ void Grid::printGrid(Square* grid[])
         std::cout << std::endl;
     }
 }
+
+void Grid::testData()
+{
+    int testCells[3] = {13, 93, 173};
+    for (int i = 0 ; i < 3; i++) {
+        Square* test = grid[testCells[i]];
+        test->setCurrentStateTrue();
+    }
+}
+

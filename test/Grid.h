@@ -20,6 +20,6 @@ public:
     Grid(int, int);
     Square** grid;
     void setupGrid();
-    void printGrid(Square* grid[]);
-    
+    void printGrid();
+    void testData();
 };
