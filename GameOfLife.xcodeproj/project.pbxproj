@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B11F98F17032DC80032CA71 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B11F98D17032DC80032CA71 /* Grid.cpp */; };
+		6B444F2C170B58E6008BDF78 /* libncurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B444F2B170B58E6008BDF78 /* libncurses.dylib */; };
 		6B4FA84A16FA594200F73602 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FA84916FA594200F73602 /* main.cpp */; };
 		6BBEF1F316FDE00A00D70631 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEF1F116FDE00A00D70631 /* Square.cpp */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		6B11F98D17032DC80032CA71 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
 		6B11F98E17032DC80032CA71 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		6B444F2B170B58E6008BDF78 /* libncurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.dylib; path = usr/lib/libncurses.dylib; sourceTree = SDKROOT; };
 		6B4FA84616FA594200F73602 /* GameOfLife */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameOfLife; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4FA84916FA594200F73602 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6BBEF1F116FDE00A00D70631 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B444F2C170B58E6008BDF78 /* libncurses.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +50,7 @@
 		6B4FA83D16FA594200F73602 = {
 			isa = PBXGroup;
 			children = (
+				6B444F2B170B58E6008BDF78 /* libncurses.dylib */,
 				6B4FA84816FA594200F73602 /* GameOfLife */,
 				6B4FA84716FA594200F73602 /* Products */,
 			);

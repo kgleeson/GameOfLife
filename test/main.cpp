@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <curses.h>
+#include <unistd.h>
 #include "Grid.h"
 #define WIDTH 80
 #define HEIGHT 25
@@ -20,7 +21,6 @@ using namespace std;
 int main(int argc, const char * argv[])
 {
     Grid grid = *new Grid(WIDTH, HEIGHT);
-    grid.setupGrid();
     grid.testData();
     grid.printGrid();
     return 0;

@@ -15,12 +15,14 @@
 #endif /* defined(__GameOfLife__Grid__) */
 
 class Grid{
+    void setupGrid();
+    Square** grid;
+    Square* getSquareByXY(int, int);
     int width, height;
 public:
     Grid(int, int);
-    Square** grid;
-    void setupGrid();
     void printGrid();
     void testData();
-    Square getSquareXY(int, int);
+    void getXYofSquare(int*,int*,int);
+    int findNeighbours(int);
 };

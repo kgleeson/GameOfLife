@@ -15,11 +15,11 @@
 
 class Square{
     int x, y;
-    int iNum;
+    int indexNum;
     int height, width;
     bool shouldFlip = false;
-public:
     bool currentState = false;
+public:
     Square(int, int, int);
     void setPos(int, int);
     void setCurrentStateTrue();

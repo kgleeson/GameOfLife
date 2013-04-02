@@ -7,45 +7,35 @@
 //
 #include "Square.h"
 
-Square::Square(int a, int b, int c){
+Square::Square(int a, int b, int c)
+{
     width = a;
     height = b;
-    iNum = c;
-    
+    indexNum = c;
 }
 
-void Square::setPos(int a, int b){
+void Square::setPos(int a, int b)
+{
     x = a;
     y = b;
 }
 
-void Square::setCurrentStateTrue(){
+void Square::setCurrentStateTrue()
+{
     currentState = true;
-    
 }
 
-void Square::setShouldFlip(){
+void Square::setShouldFlip()
+{
     shouldFlip = true;
 }
 
-
-int Square::findNeighbours(Square* arrayName[]){
-    int totalNeighbours = 0;
-    Square* neighbour;
-    
-    for(int xPos=std::max(0, x - 1); xPos<=x + 1 && xPos<=width; xPos++) {
-        for(int yPos=std::max(0, y - 1); yPos<=y + 1 && yPos<height; yPos++) {
-            if (x==0 && y==0) {
-                continue;
-            }
-            neighbour = arrayName[x+(y*height)];
-            if (neighbour->currentState){
-                totalNeighbours++;
-            }
-        }
-    }
-    return totalNeighbours;
+bool Square::getCurrentState()
+{
+    return currentState;
 }
+
+
 
 
 
