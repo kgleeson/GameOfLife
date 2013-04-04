@@ -24,7 +24,6 @@ public:
     void setPos(int, int);
     void setCurrentStateTrue();
     void setShouldFlip();
-    int findNeighbours(Square* arrayName[]);
     bool getCurrentState();
     bool getShouldFlip();
     void flipSquare();

@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include "Grid.h"
 #define WIDTH 80
-#define HEIGHT 25
+#define HEIGHT 24
 
 
 using namespace std;
@@ -22,10 +22,12 @@ int main(int argc, const char * argv[])
 {
     Grid grid = *new Grid(WIDTH, HEIGHT);
     grid.testData();
-    grid.printGrid();
-    grid.updateLoop();
-    grid.actionLoop();
-    grid.printGrid();
+    while (true)
+    {
+        grid.printGrid();
+        grid.updateLoop();
+        grid.actionLoop();
+    }
     return 0;
 }
 
