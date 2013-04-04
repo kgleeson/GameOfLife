@@ -27,6 +27,7 @@ int main(int argc, const char * argv[])
         grid.printGrid();
         grid.updateLoop();
         grid.actionLoop();
+        system("sleep 0.5");
     }
     return 0;
 }

@@ -22,7 +22,6 @@ void Grid::setupGrid()
     {
         for(int xPos = 0; xPos < width ; xPos++)
         {
-//            cout << "y: " << yPos << " x: " << xPos << " pos: " << xPos + (yPos * width) << endl;
             int iNum = xPos + (yPos * width);
             Square* obj = new Square(xPos, yPos, iNum);
             grid[xPos + (yPos * width)] = obj;
@@ -44,7 +43,7 @@ void Grid::printGrid()
             }
             else
             {
-                std::cout << " ";
+                std::cout << "•";
             }
         }
         std::cout << std::endl;
@@ -56,6 +55,11 @@ void Grid::testData()
     for (int i = 1 ; i < 9; i++)
     {
         Square* test = Grid::getSquareByXY(i,5);
+        test->setCurrentStateTrue();
+    }
+    for(int i = 1 ; i <4; i++)
+    {
+        Square* test = Grid::getSquareByXY(i,20);
         test->setCurrentStateTrue();
     }
 }
@@ -75,7 +79,6 @@ int Grid::findNeighbours(int indexNum)
 {
     int x,y;
     getXYofSquare(&x, &y, indexNum);
-//    std::cout << "X: " << x << " Y: " << y << std::endl;
     int totalNeighbours = 0;
     Square* neighbour;
     for(int yPos=std::max(0, y - 1); yPos <= y + 1 && yPos < height; yPos++)
@@ -87,8 +90,6 @@ int Grid::findNeighbours(int indexNum)
                 continue;
             }
             neighbour = getSquareByXY(xPos, yPos);
-//            std::cout << "iNum: " << iNum << std::endl;
-//            std::cout << "N: " << neighbour->getCurrentState() << std::endl;
             if (neighbour->getCurrentState())
             {
                 totalNeighbours++;
@@ -109,8 +110,6 @@ void Grid::updateLoop()
             int indexNum = testSquare->indexNum;
             int neighbours = findNeighbours(indexNum);
             bool alive = testSquare->getCurrentState();
-            
-//            std::cout << "Alive: " << alive << " neighbours: " << neighbours << std::endl;
             if (alive && (neighbours < 2 || neighbours > 3))
             {
                 testSquare->setShouldFlip();
