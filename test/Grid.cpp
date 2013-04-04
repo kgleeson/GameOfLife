@@ -107,7 +107,7 @@ void Grid::updateLoop()
         for(int xPos = 0; xPos < width ; xPos++)
         {
             Square* testSquare = getSquareByXY(xPos, yPos);
-            int indexNum = testSquare->indexNum;
+            int indexNum = testSquare->getIndexNum();
             int neighbours = findNeighbours(indexNum);
             bool alive = testSquare->getCurrentState();
             if (alive && (neighbours < 2 || neighbours > 3))

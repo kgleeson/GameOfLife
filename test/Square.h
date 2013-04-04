@@ -18,13 +18,14 @@ class Square{
     int height, width;
     bool shouldFlip = false;
     bool currentState = false;
-public:
     int indexNum;
+public:
     Square(int, int, int);
     void setCurrentStateTrue();
     void setShouldFlip();
     bool getCurrentState();
     bool getShouldFlip();
     void flipSquare();
+    int getIndexNum();
 };
 

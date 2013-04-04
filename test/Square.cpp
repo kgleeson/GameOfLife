@@ -39,4 +39,7 @@ void Square::flipSquare()
     currentState = !currentState;
 }
 
-
+int Square::getIndexNum()
+{
+    return indexNum;
+}
