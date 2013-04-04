@@ -21,7 +21,6 @@ class Square{
 public:
     int indexNum;
     Square(int, int, int);
-    void setPos(int, int);
     void setCurrentStateTrue();
     void setShouldFlip();
     bool getCurrentState();

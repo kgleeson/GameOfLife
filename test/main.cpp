@@ -25,8 +25,7 @@ int main(int argc, const char * argv[])
     while (true)
     {
         grid.printGrid();
-        grid.updateLoop();
-        grid.actionLoop();
+        grid.runLoops();
         system("sleep 0.5");
     }
     return 0;

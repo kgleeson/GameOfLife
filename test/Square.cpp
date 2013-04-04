@@ -14,12 +14,6 @@ Square::Square(int a, int b, int c)
     indexNum = c;
 }
 
-void Square::setPos(int a, int b)
-{
-    x = a;
-    y = b;
-}
-
 void Square::setCurrentStateTrue()
 {
     currentState = true;
@@ -42,14 +36,7 @@ bool Square::getShouldFlip()
 
 void Square::flipSquare()
 {
-    if (currentState)
-    {
-        currentState = false;
-    }
-    else if (!currentState)
-    {
-        currentState = true;
-    }
+    currentState = !currentState;
 }
 
 

@@ -136,3 +136,9 @@ void Grid::actionLoop()
         }
     }
 }
+
+void Grid::runLoops()
+{
+    updateLoop();
+    actionLoop();
+}

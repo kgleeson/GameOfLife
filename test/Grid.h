@@ -19,12 +19,13 @@ class Grid{
     Square** grid;
     Square* getSquareByXY(int, int);
     int width, height;
+    int findNeighbours(int);
+    void getXYofSquare(int*,int*,int);
+    void updateLoop();
+    void actionLoop();
 public:
     Grid(int, int);
     void printGrid();
     void testData();
-    void getXYofSquare(int*,int*,int);
-    int findNeighbours(int);
-    void updateLoop();
-    void actionLoop();
+    void runLoops();
 };
