@@ -35,8 +35,21 @@ bool Square::getCurrentState()
     return currentState;
 }
 
+bool Square::getShouldFlip()
+{
+    return shouldFlip;
+}
 
-
-
+void Square::flipSquare()
+{
+    if (currentState)
+    {
+        currentState = false;
+    }
+    else if (!currentState)
+    {
+        currentState = true;
+    }
+}
 
 

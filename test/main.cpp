@@ -23,6 +23,9 @@ int main(int argc, const char * argv[])
     Grid grid = *new Grid(WIDTH, HEIGHT);
     grid.testData();
     grid.printGrid();
+    grid.updateLoop();
+    grid.actionLoop();
+    grid.printGrid();
     return 0;
 }
 

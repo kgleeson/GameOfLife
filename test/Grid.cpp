@@ -49,14 +49,13 @@ void Grid::printGrid()
         }
         std::cout << std::endl;
     }
-    std::cout << findNeighbours(81) << std::endl;
 }
 
 void Grid::testData()
 {
-    for (int i = 0 ; i < 3; i++)
+    for (int i = 1 ; i < 9; i++)
     {
-        Square* test = Grid::getSquareByXY(i,i);
+        Square* test = Grid::getSquareByXY(i,5);
         test->setCurrentStateTrue();
     }
 }
@@ -98,4 +97,42 @@ int Grid::findNeighbours(int indexNum)
         }
     }
     return totalNeighbours;
+}
+
+
+void Grid::updateLoop()
+{
+    for(int yPos = 0; yPos < height ; yPos++)
+    {
+        for(int xPos = 0; xPos < width ; xPos++)
+        {
+            Square* testSquare = getSquareByXY(xPos, yPos);
+            int neighbours = testSquare->indexNum;
+            bool alive = testSquare->getCurrentState();
+            
+            if (alive && (neighbours < 2 || neighbours > 3))
+            {
+                testSquare->setShouldFlip();
+            }
+            else if (!alive && neighbours == 3)
+            {
+                testSquare->setShouldFlip();
+            }
+        }
+    }
+}
+
+void Grid::actionLoop()
+{
+    for(int yPos = 0; yPos < height ; yPos++)
+    {
+        for(int xPos = 0; xPos < width ; xPos++)
+        {
+            Square* testSquare = getSquareByXY(xPos, yPos);
+            if (testSquare->getShouldFlip())
+            {
+                testSquare->flipSquare();
+            }
+        }
+    }
 }

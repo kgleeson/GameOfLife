@@ -25,4 +25,6 @@ public:
     void testData();
     void getXYofSquare(int*,int*,int);
     int findNeighbours(int);
+    void updateLoop();
+    void actionLoop();
 };
